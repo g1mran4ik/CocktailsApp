@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+    color: #1677ff;
+}
+
+.info-and-photo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    padding-left: 2em;
+}
+
+.photo {
+    padding-right: 1em;
+    padding-top: 2em;
+}
+
+.about-project {
+    padding-left: 2em;
+}

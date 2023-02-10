@@ -1,0 +1,46 @@
+.cocktail-carousel {
+  width: 300px;
+  height: 410px;
+}
+
+/* .dots {
+  width: 300px !important;
+  justify-content: space-around !important;
+} */
+
+.dots li button {
+  background-color: #549afa !important;
+  /* height: 4px !important;
+  width: 30px !important; */
+}
+
+/* .dots li {
+  width: 30px !important;
+} */
+
+.dots li.slick-active button {
+  background-color: #1677ff !important;
+  /* width: 40px !important; */
+}
+
+/* .dots li.slick-active {
+  width: 40px !important;
+} */
+
+.make-content-style {
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.description {
+  text-align: center;
+}
+
+.custom-card {
+  width: 300px;
+}

@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  # api:
+  front:
+    build: 
+      context: ./front
+      dockerfile: ./docker/dev/Dockerfile
+    volumes:
+      - ./front/src:/home/drinks/src
+    stdin_open: true    
+    tty: true
+  nginx:
+    depends_on:
+      # - api
+      - front
+    image: nginx:1.17.2-alpine
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+  # postgres:
+  #   image: postgres:14.4-alpine
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     - POSTGRES_PASSWORD=drinks
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   command: ["postgres", "-c", "log_statement=all"]

@@ -1,0 +1,42 @@
+.main-page-box {
+  display: flex;
+}
+
+.main-page-random-cocktail-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.generate-cocktail-text {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+.generate-cocktail-text h1 {
+  font-size: 16px;
+  padding-top: 0;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-top: 0;
+}
+
+.generate-button {
+  margin-left: 175px;
+  width: 150px;
+  height: 50px;
+}
+
+.like-phrase {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-top: 20px;
+}
+
+.rating-block {
+  display: flex;
+  justify-content: space-around;
+}
+

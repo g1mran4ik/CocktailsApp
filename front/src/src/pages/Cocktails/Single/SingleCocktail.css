@@ -1,0 +1,26 @@
+.description {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.instruction {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* .ingredients {
+  height: 150px;
+  overflow-y: scroll;
+} */
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.singlecocktail{
+	width: 400px
+}
