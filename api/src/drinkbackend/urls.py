@@ -47,15 +47,16 @@ default_router = DefaultRouter()
 default_router.register('user-create', UserViewSet, 'user-create')
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('cocktails/', include('drinks.urls')),
-    path('', RedirectView.as_view(url='/cocktails/', permanent=True)),
-    path('accounts/login/', CustomTokenCreateView.as_view(), name='login'),
-    path('accounts/logout/', djoser_views.TokenDestroyView.as_view(), name='logout'),
-    # path('accounts/create/', UserViewSet, name='user-create'),
+    path("api/admin/", admin.site.urls),
+    path('api/cocktails/', include('drinks.urls')),
+    path('api/', RedirectView.as_view(url='api/cocktails/', permanent=True)),
+    path('api/accounts/login/', CustomTokenCreateView.as_view(), name='login'),
+    path('api/accounts/logout/', djoser_views.TokenDestroyView.as_view(), name='logout'),
+    path('api/', include(default_router.urls)),
+    path('api/', include(current_user_router.urls)),
 ]
 
-urlpatterns += current_user_router.urls
-urlpatterns += default_router.urls
+# urlpatterns += current_user_router.urls
+# urlpatterns += default_router.urls
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
